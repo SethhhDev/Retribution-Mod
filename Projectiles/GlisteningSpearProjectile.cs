@@ -102,5 +102,15 @@ namespace RetributionMod.Projectiles
 
             }
         }
+        
+         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            target.AddBuff(BuffID.OnFire, 100);
+        }
+
+        public override void OnHitPvp(Player target, int damage, bool crit)
+        {
+            target.AddBuff(BuffID.OnFire, 100);
+        }
     }
 }
