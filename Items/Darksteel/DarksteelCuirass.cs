@@ -33,6 +33,15 @@ namespace RetributionMod.Items.Darksteel
         {
             player.setBonus = "Immunity to 'Voidstruck'";
         }
+          public override void ArmorSetShadows(Player player)
+        {
+            player.armorEffectDrawShadow = true;
+            player.armorEffectDrawShadowSubtle = true;
+            player.armorEffectDrawOutlines = true;
+            player.armorEffectDrawShadowLokis = true;
+            player.armorEffectDrawOutlinesForbidden = true;
+            player.armorEffectDrawShadowEOCShield = true;
+        }
         public override void UpdateEquip(Player player)
         {
             player.GetDamage(DamageClass.Generic) += 0.05f;
